@@ -84,7 +84,7 @@
                                 class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
                                 <img src="{{ asset('images/profile.png') }}" alt="{{ $profile['name'] }} Profile"
                                     class="w-full h-full rounded-full object-cover scale-90"
-                                    onerror="this.src='https://github.com/midas79/midas79/blob/main/halfdead.png?raw=true'">
+                                    onerror="this.src='https://github.com/midas79/portfolio-website/blob/2510bdacda046d695d984622fc4c26220069e2c9/public/images/profile.png">
                             </div>
                         </div>
                         <!-- Floating elements -->

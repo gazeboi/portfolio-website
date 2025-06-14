@@ -25,83 +25,93 @@
 
                 <!-- Desktop Social Links -->
                 <div class="hidden md:flex space-x-3 sm:space-x-4">
-                    <a href="{{ $profile['github'] }}" target="_blank" class="text-gray-400 hover:text-white">
+                    <a href="{{ $profile['github'] }}" target="_blank"
+                        class="text-gray-400 hover:text-white transition duration-300">
                         <i class="fab fa-github text-lg sm:text-xl"></i>
                     </a>
-                    <a href="{{ $profile['facebook'] }}" target="_blank" class="text-gray-400 hover:text-white">
+                    <a href="{{ $profile['facebook'] }}" target="_blank"
+                        class="text-gray-400 hover:text-white transition duration-300">
                         <i class="fab fa-facebook text-lg sm:text-xl"></i>
                     </a>
-                    <a href="{{ $profile['instagram'] }}" target="_blank" class="text-gray-400 hover:text-white">
+                    <a href="{{ $profile['instagram'] }}" target="_blank"
+                        class="text-gray-400 hover:text-white transition duration-300">
                         <i class="fab fa-instagram text-lg sm:text-xl"></i>
                     </a>
-                    <a href="{{ $profile['linkedin'] }}" target="_blank" class="text-gray-400 hover:text-white">
+                    <a href="{{ $profile['linkedin'] }}" target="_blank"
+                        class="text-gray-400 hover:text-white transition duration-300">
                         <i class="fab fa-linkedin text-lg sm:text-xl"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button"
-                    class="md:hidden text-gray-300 hover:text-white focus:outline-none focus:text-white transition duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                        <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
+                    class="block md:hidden text-gray-300 hover:text-white focus:outline-none focus:text-white transition-colors duration-300 hamburger-button touch-button"
+                    aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
                 </button>
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden">
-                <div
-                    class="px-2 pt-4 pb-6 space-y-1 bg-gray-900 bg-opacity-95 backdrop-blur-sm rounded-lg mt-4 border border-gray-700">
+            <div id="mobile-menu" class="block md:hidden hidden" role="menu">
+                <div class="mobile-menu-container px-2 pt-4 pb-6 space-y-1 rounded-lg mt-4">
                     <!-- Mobile Navigation Links -->
                     <a href="#home"
-                        class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition duration-300">
+                        class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white rounded-lg transition duration-300"
+                        role="menuitem">
                         <i class="fas fa-home mr-3 text-purple-400"></i>Home
                     </a>
                     <a href="#about"
-                        class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition duration-300">
+                        class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white rounded-lg transition duration-300"
+                        role="menuitem">
                         <i class="fas fa-user mr-3 text-blue-400"></i>About
                     </a>
                     <a href="#tech"
-                        class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition duration-300">
+                        class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white rounded-lg transition duration-300"
+                        role="menuitem">
                         <i class="fas fa-code mr-3 text-green-400"></i>Tech Stack
                     </a>
                     <a href="#projects"
-                        class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition duration-300">
+                        class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white rounded-lg transition duration-300"
+                        role="menuitem">
                         <i class="fas fa-folder mr-3 text-yellow-400"></i>Projects
                     </a>
                     <a href="#contact"
-                        class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition duration-300">
+                        class="mobile-nav-link block px-4 py-3 text-gray-300 hover:text-white rounded-lg transition duration-300"
+                        role="menuitem">
                         <i class="fas fa-envelope mr-3 text-pink-400"></i>Contact
                     </a>
 
                     <!-- Mobile Social Links -->
-                    <div class="pt-4 border-t border-gray-700 mt-4">
+                    <div class="social-section pt-4 border-t border-gray-700 mt-4">
                         <p class="px-4 text-sm text-gray-400 mb-3">Connect with me</p>
                         <div class="flex justify-center space-x-6">
                             <a href="{{ $profile['github'] }}" target="_blank"
-                                class="text-gray-400 hover:text-white transition duration-300 hover:scale-110">
+                                class="text-gray-400 hover:text-white transition duration-300 hover:scale-110"
+                                aria-label="GitHub">
                                 <i class="fab fa-github text-2xl"></i>
                             </a>
                             <a href="{{ $profile['facebook'] }}" target="_blank"
-                                class="text-gray-400 hover:text-white transition duration-300 hover:scale-110">
+                                class="text-gray-400 hover:text-white transition duration-300 hover:scale-110"
+                                aria-label="Facebook">
                                 <i class="fab fa-facebook text-2xl"></i>
                             </a>
                             <a href="{{ $profile['instagram'] }}" target="_blank"
-                                class="text-gray-400 hover:text-white transition duration-300 hover:scale-110">
+                                class="text-gray-400 hover:text-white transition duration-300 hover:scale-110"
+                                aria-label="Instagram">
                                 <i class="fab fa-instagram text-2xl"></i>
                             </a>
                             <a href="{{ $profile['linkedin'] }}" target="_blank"
-                                class="text-gray-400 hover:text-white transition duration-300 hover:scale-110">
+                                class="text-gray-400 hover:text-white transition duration-300 hover:scale-110"
+                                aria-label="LinkedIn">
                                 <i class="fab fa-linkedin text-2xl"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Mobile CTA Button -->
-                    <div class="pt-4">
+                    <div class="cta-section pt-4">
                         <a href="mailto:{{ $profile['email'] }}"
                             class="block bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-3 rounded-lg font-semibold hover:opacity-90 transition duration-300 text-center">
                             <i class="fas fa-paper-plane mr-2"></i>Get In Touch
@@ -123,7 +133,8 @@
                         </div>
                         <div class="gradient-text leading-tight">{{ $profile['name'] }}</div>
                         <div class="text-gray-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 sm:mt-2 leading-tight">
-                            {{ $profile['title'] }}</div>
+                            {{ $profile['title'] }}
+                        </div>
                     </h1>
                     <p
                         class="text-gray-400 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0 px-2 sm:px-0">

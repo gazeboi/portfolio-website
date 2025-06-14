@@ -13,6 +13,7 @@ class PortfolioController extends Controller
             'title' => 'I build things for web',
             'greeting' => 'Hi 👋, My name is',
             'description' => 'Computer Science Student at Brawijaya University passionate about creating innovative web solutions',
+            'cv_path' => 'cv/Dionisius_Surya_Jaya_CV.pdf',
             'about' => [
                 'title' => 'About Me',
                 'subtitle' => 'Get to know me better',
@@ -56,7 +57,16 @@ class PortfolioController extends Controller
 
         $projects = [
             [
-                'title' => 'Eden Erde',
+                'title' => 'MovieMate',
+                'description' => 'Interactive weather dashboard using OpenWeather API. Features location-based weather, forecasts, and beautiful data visualizations.',
+                'image' => 'projects/project3.png',
+                'gradient' => 'from-indigo-400 to-cyan-400',
+                'github' => 'https://github.com/midas79/movie-mate',
+                'demo' => '#',
+                'tags' => ['NextJS', 'TypeScript', 'ExpressJS', 'MongoDB', 'TailwindCSS']
+            ],
+            [
+                'title' => 'EdenErde',
                 'description' => 'Full-stack e-commerce platform built with Laravel and MySQL. Features include user authentication, product management, shopping cart, and payment integration.',
                 'image' => 'projects/project1.png',
                 'gradient' => 'from-purple-400 to-pink-400',
@@ -70,45 +80,10 @@ class PortfolioController extends Controller
                 'image' => 'projects/project2.png',
                 'gradient' => 'from-blue-400 to-purple-500',
                 'github' => 'https://github.com/midas79/GeoTale',
-                'demo' => 'https://midas79.github.io/GeoTale/#/',
+                'demo' => 'https://midas79.github.io/GeoTale/',
                 'tags' => ['JavaScript', 'Node.js', 'Webpack']
             ],
-            [
-                'title' => 'Weather Dashboard',
-                'description' => 'Interactive weather dashboard using OpenWeather API. Features location-based weather, forecasts, and beautiful data visualizations.',
-                'image' => 'project3.jpg',
-                'gradient' => 'from-indigo-400 to-cyan-400',
-                'github' => '#',
-                'demo' => '#',
-                'tags' => ['JavaScript', 'API', 'Chart.js']
-            ],
-            [
-                'title' => 'Portfolio Website',
-                'description' => 'Responsive portfolio website built with modern web technologies. Features smooth animations and optimized performance.',
-                'image' => 'project4.jpg',
-                'gradient' => 'from-orange-400 to-red-400',
-                'github' => '#',
-                'demo' => '#',
-                'tags' => ['HTML', 'CSS', 'JavaScript']
-            ],
-            [
-                'title' => 'Blog Platform',
-                'description' => 'Content management system for blogging with rich text editor, categories, tags, and comment system built with Laravel.',
-                'image' => 'project5.jpg',
-                'gradient' => 'from-green-400 to-blue-500',
-                'github' => '#',
-                'demo' => '#',
-                'tags' => ['Laravel', 'TailwindCSS', 'MySQL']
-            ],
-            [
-                'title' => 'Machine Learning Model',
-                'description' => 'Predictive analytics model using Python and scikit-learn for data analysis and visualization with interactive dashboard.',
-                'image' => 'project6.jpg',
-                'gradient' => 'from-yellow-400 to-orange-500',
-                'github' => '#',
-                'demo' => '#',
-                'tags' => ['Python', 'ML', 'Flask']
-            ]
+
         ];
 
         return view('portfolio', compact('profile', 'skills', 'projects'));

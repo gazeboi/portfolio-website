@@ -51,15 +51,27 @@
                     <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-lg">
                         {{ $profile['description'] }}
                     </p>
+
+                    <!-- Updated CTA Buttons with CV Download -->
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#projects"
                             class="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition duration-300 text-center">
                             View Projects
                         </a>
-                        <a href="#contact"
-                            class="border border-gray-600 px-8 py-3 rounded-lg font-semibold hover:border-white transition duration-300 text-center">
-                            Contact Me
-                        </a>
+
+                        <!-- Download CV Button -->
+                        @if(file_exists(public_path($profile['cv_path'] ?? '')))
+                            <a href="{{ asset($profile['cv_path']) }}" download="Dionisius_Surya_Jaya_CV.pdf"
+                                class="border border-gray-600 px-8 py-3 rounded-lg font-semibold hover:border-white hover:bg-white hover:text-black transition duration-300 text-center flex items-center justify-center">
+                                <i class="fas fa-download mr-2"></i>
+                                Download CV
+                            </a>
+                        @else
+                            <a href="#contact"
+                                class="border border-gray-600 px-8 py-3 rounded-lg font-semibold hover:border-white transition duration-300 text-center">
+                                Contact Me
+                            </a>
+                        @endif
                     </div>
                 </div>
 
@@ -70,8 +82,9 @@
                             class="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-1">
                             <div
                                 class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
-                                <img src="https://github.com/midas79/midas79/blob/main/halfdead.png?raw=true" alt="Profile"
-                                    class="w-full h-full rounded-full object-cover scale-90">
+                                <img src="{{ asset('images/profile.png') }}" alt="{{ $profile['name'] }} Profile"
+                                    class="w-full h-full rounded-full object-cover scale-90"
+                                    onerror="this.src='https://github.com/midas79/midas79/blob/main/halfdead.png?raw=true'">
                             </div>
                         </div>
                         <!-- Floating elements -->
@@ -118,12 +131,14 @@
                                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                                     <div class="text-center">
                                         <div class="text-2xl md:text-3xl font-bold gradient-text mb-1">
-                                            {{ count($projects) }}+</div>
+                                            {{ count($projects) }}+
+                                        </div>
                                         <div class="text-gray-400 text-xs md:text-sm">Projects</div>
                                     </div>
                                     <div class="text-center">
                                         <div class="text-2xl md:text-3xl font-bold gradient-text mb-1">
-                                            {{ count($skills['Programming Languages']) }}+</div>
+                                            {{ count($skills['Programming Languages']) }}+
+                                        </div>
                                         <div class="text-gray-400 text-xs md:text-sm">Languages</div>
                                     </div>
                                     <div class="text-center">
@@ -346,7 +361,7 @@
     <footer class="py-8 px-6 border-t border-gray-800 bg-gray-900">
         <div class="container mx-auto text-center">
             <p class="text-gray-400 text-sm">
-                © 2025 <span class="gradient-text">{{ $profile['name'] }}</span> • Built with ❤️ and ☕
+                © 2025 <span class="gradient-text">{{ $profile['name'] }}</span> • Powered by ☕
             </p>
         </div>
     </footer>

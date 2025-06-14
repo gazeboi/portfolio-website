@@ -58,7 +58,7 @@ class PortfolioController extends Controller
         $projects = [
             [
                 'title' => 'MovieMate',
-                'description' => 'Interactive weather dashboard using OpenWeather API. Features location-based weather, forecasts, and beautiful data visualizations.',
+                'description' => 'A web application for tracking and logging movies you\'ve watched or plan to watch. Built with NextJS, TMDB API, and MongoDB for user-based movie management.',
                 'image' => 'projects/project3.png',
                 'gradient' => 'from-indigo-400 to-cyan-400',
                 'github' => 'https://github.com/midas79/movie-mate',
@@ -67,7 +67,7 @@ class PortfolioController extends Controller
             ],
             [
                 'title' => 'EdenErde',
-                'description' => 'Full-stack e-commerce platform built with Laravel and MySQL. Features include user authentication, product management, shopping cart, and payment integration.',
+                'description' => 'An e-commerce platform for home furniture. Includes user authentication, product management, shopping cart, and Stripe payment integration.',
                 'image' => 'projects/project1.png',
                 'gradient' => 'from-purple-400 to-pink-400',
                 'github' => 'https://github.com/midas79/eden-erde',
@@ -76,15 +76,15 @@ class PortfolioController extends Controller
             ],
             [
                 'title' => 'GeoTale',
-                'description' => 'React-based task management application with drag-and-drop functionality, real-time updates, and user collaboration features.',
+                'description' => 'A web app for sharing stories and photos based on location. Features OpenLayers-based maps, drag-and-drop story upload, real-time updates, and user collaboration.',
                 'image' => 'projects/project2.png',
                 'gradient' => 'from-blue-400 to-purple-500',
                 'github' => 'https://github.com/midas79/GeoTale',
                 'demo' => 'https://midas79.github.io/GeoTale/',
                 'tags' => ['JavaScript', 'Node.js', 'Webpack']
             ],
-
         ];
+
 
         return view('portfolio', compact('profile', 'skills', 'projects'));
     }

@@ -9,79 +9,92 @@ class PortfolioController extends Controller
     public function index()
     {
         $profile = [
-            'name' => 'Dionisius Surya Jaya',
-            'title' => 'I build things for web',
-            'greeting' => 'Hi 👋, My name is',
-            'description' => 'Computer Science Student at Brawijaya University passionate about creating innovative web solutions',
-            'cv_path' => 'cv/Dionisius_Surya_Jaya_CV.pdf',
+            'name' => 'Raikhan Geza Alburama',
+            'title' => 'Blending design, code, and empathy into seamless digital journeys',
+            'greeting' => 'Hey there 👋, My name is',
+            'description' => 'Computer Science Student at Brawijaya University focused on UI/UX design and innovative software solutions',
+            'cv_path' => 'cv/CV Raikhan Geza Alburama .pdf',
             'about' => [
-                'title' => 'About Me',
+                'title' => 'About',
                 'subtitle' => 'Get to know me better',
-                'content' => 'I am an undergraduate Computer Science student at Brawijaya University with a strong passion for programming and software development. My goal is to become a professional programmer who not only writes clean and efficient code but also builds meaningful and impactful solutions. I am constantly seeking opportunities to learn new technologies, improve my skills, and contribute to real-world projects. You can explore some of my academic work and personal projects on my GitHub.',
+                'content' => 'I am a Computer Science student at Brawijaya University who is passionate about crafting intuitive and impactful digital experiences. I specialize in UI/UX design and front-end development, with experience working on web and mobile applications. My goal is to bridge the gap between aesthetics and functionality to build meaningful technology. I’m always eager to collaborate, learn new tools, and create designs that solve real-world problems.',
+                'highlights',
+
                 'highlights' => [
                     'Computer Science Student',
                     'Brawijaya University',
-                    'Passionate Programmer'
+                    'UI/UX Enthusiast',
+                    'Creative Problem Solver'
                 ],
                 'interests' => [
                     'Web Development',
-                    'Mobile Programming',
-                    'Software Architecture'
+                    'Mobile App Development',
+                    'UI/UX Design'
+                    
                 ]
             ],
-            'github' => 'https://github.com/midas79',
-            'facebook' => 'https://facebook.com/diavollllo',
-            'instagram' => 'https://instagram.com/dionsaaurus',
-            'email' => 'dionisius.suryajaya@gmail.com',
+            'github' => 'https://github.com/gazeboi',
+            'facebook' => 'https://www.facebook.com/profile.php?id=100012872413096',
+            'instagram' => 'https://www.instagram.com/raihangeza/',
+            'email' => 'raikhangeza10gmail.com',
             'linkedin' => 'https://www.linkedin.com/in/dionisiussj/',
         ];
 
         $skills = [
             'Programming Languages' => [
-                ['name' => 'Python', 'icon' => 'fab fa-python', 'color' => 'text-yellow-400'],
+                ['name' => 'HTML', 'icon' => 'fab fa-html5', 'color' => 'text-orange-500'],
+                ['name' => 'CSS', 'icon' => 'fab fa-css3-alt', 'color' => 'text-blue-500'],
                 ['name' => 'JavaScript', 'icon' => 'fab fa-js-square', 'color' => 'text-yellow-300'],
-                ['name' => 'TypeScript', 'icon' => 'fab fa-js-square', 'color' => 'text-blue-400'],
                 ['name' => 'Java', 'icon' => 'fab fa-java', 'color' => 'text-red-500'],
                 ['name' => 'Kotlin', 'icon' => 'fab fa-android', 'color' => 'text-green-500'],
-                ['name' => 'PHP', 'icon' => 'fab fa-php', 'color' => 'text-purple-400']
+                ['name' => 'Figma', 'icon' => 'fab fa-figma', 'color' => 'text-pink-500']
             ],
             'Frameworks & Tools' => [
                 ['name' => 'Laravel', 'icon' => 'fab fa-laravel', 'color' => 'text-red-400'],
                 ['name' => 'React', 'icon' => 'fab fa-react', 'color' => 'text-blue-400'],
-                ['name' => 'Next.js', 'icon' => 'fab fa-react', 'color' => 'text-white'],
-                ['name' => 'Node.js', 'icon' => 'fab fa-node-js', 'color' => 'text-green-400'],
                 ['name' => 'TailwindCSS', 'icon' => 'fas fa-paint-brush', 'color' => 'text-cyan-400'],
-                ['name' => 'Git', 'icon' => 'fab fa-git-alt', 'color' => 'text-orange-500']
-            ]
+                ['name' => 'Git', 'icon' => 'fab fa-git-alt', 'color' => 'text-orange-500'],
+                ['name' => 'VS Code', 'icon' => 'fas fa-code', 'color' => 'text-indigo-400'],
+                ['name' => 'Adobe XD', 'icon' => 'fas fa-pencil-ruler', 'color' => 'text-pink-400']
+                    ]
         ];
 
         $projects = [
             [
-                'title' => 'MovieMate',
-                'description' => 'A web application for tracking and logging movies you\'ve watched or plan to watch. Built with NextJS, TMDB API, and MongoDB for user-based movie management.',
-                'image' => 'projects/project3.png',
+                'title' => 'Reservin',
+                'description' => 'A web and mobile platform for room and venue reservation, featuring user login, real-time booking, payment integration, and admin panel..',
+                'image' => 'projects/reservin.png',
                 'gradient' => 'from-indigo-400 to-cyan-400',
-                'github' => 'https://github.com/midas79/movie-mate',
-                'demo' => '#',
-                'tags' => ['NextJS', 'TypeScript', 'ExpressJS', 'MongoDB', 'TailwindCSS']
+                'github' => 'https://github.com/gazeboi/reservin-web',
+                'demo' => 'https://reservin.achmedhibatillah.com/',
+                'tags' => ['Blade', 'javaScript', 'CSS', 'PHP', 'TailwindCSS','VueJS','FIGMA' ]
             ],
             [
-                'title' => 'EdenErde',
-                'description' => 'An e-commerce platform for home furniture. Includes user authentication, product management, shopping cart, and Stripe payment integration.',
-                'image' => 'projects/project1.png',
-                'gradient' => 'from-purple-400 to-pink-400',
-                'github' => 'https://github.com/midas79/eden-erde',
-                'demo' => 'https://eden-erde.vercel.app/',
-                'tags' => ['NextJS', 'TypeScript', 'SanityCMS', 'TailwindCSS', 'Stripe']
+                'title' => 'MentalCare',
+                'description' => 'A mobile application to support mental health through self-assessment tools and digital counseling features.',
+                'image' => 'projects/Calmius.png',
+                'gradient' => 'from-green-400 to-indigo-400',
+                'github' => 'https://github.com/gazeboi/project-calmius',
+                'demo' => 'https://www.figma.com/proto/Z7GpL5vE5v1w1O3C58dO1O/Design?page-id=0%3A1&node-id=30-920&t=grqtVde67xUmdCrc-1',
+                'tags' => ['Kotlin', 'Mobile App', 'Mental Health','FIGMA']
             ],
             [
-                'title' => 'GeoTale',
-                'description' => 'A web app for sharing stories and photos based on location. Features OpenLayers-based maps, drag-and-drop story upload, real-time updates, and user collaboration.',
-                'image' => 'projects/project2.png',
-                'gradient' => 'from-blue-400 to-purple-500',
-                'github' => 'https://github.com/midas79/GeoTale',
-                'demo' => 'https://midas79.github.io/GeoTale/',
-                'tags' => ['JavaScript', 'Node.js', 'Webpack']
+                'title' => 'ClayConnect',
+                'description' => 'A website prototype for promoting and selling traditional pottery with user-friendly catalog and checkout experience.',
+                'image' => 'projects/Gerabahku.png',
+                'gradient' => 'from-yellow-400 to-amber-500',
+                'github' => 'https://github.com/gazeboi/ClayConnect',
+                'demo' => 'https://www.figma.com/proto/olwBPL1UULJWI9QZrw8sHn/ClayConnect?page-id=0%3A1&node-id=2009-202&starting-point-node-id=2009%3A202&t=brDyoKa3MRPKFqn2-1',
+                'tags' => ['FIGMA', 'tags' ,'Blade', 'javaScript', 'CSS', 'PHP', 'TailwindCSS','VueJS', ]
+            ],
+            [
+                'title' => 'Vieneta',
+                'description' => 'A high-fidelity e-commerce app prototype designed for a fashion brand, featuring user-friendly product browsing, wishlist functionality, and streamlined cart-to-checkout flow.',
+                'image' => 'projects/vieenta.png',
+                'gradient' => 'from-yellow-400 to-amber-500',
+                'github' => '#',
+                'demo' => 'https://www.figma.com/proto/olwBPL1UULJWI9QZrw8sHn/ClayConnect?page-id=0%3A1&node-id=2009-202&starting-point-node-id=2009%3A202&t=brDyoKa3MRPKFqn2-1',
+                'tags' => ['FIGMA',  ]
             ],
         ];
 

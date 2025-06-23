@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Dionisius Surya Jaya - Portfolio')
+@section('title', 'Raikhan Geza Alburama - Portfolio')
 
 @section('content')
     <!-- Navigation -->
@@ -9,7 +9,7 @@
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="text-lg sm:text-xl font-bold">
-                    <span class="text-purple-400">{</span><span class="text-blue-400">midas79</span><span
+                    <span class="text-purple-400">{</span><span class="text-blue-400">Gazeboi</span><span
                         class="text-purple-400">}</span>
                     <span class="text-gray-300 ml-2 hidden sm:inline">Portfolio</span>
                 </div>
@@ -148,21 +148,20 @@
                             View Projects
                         </a>
 
-                        <!-- Download CV Button -->
-                        @if(file_exists(public_path($profile['cv_path'] ?? '')))
-                            <a href="{{ asset($profile['cv_path']) }}" download="Dionisius_Surya_Jaya_CV.pdf"
-                                class="border border-gray-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:border-white hover:bg-white hover:text-black transition duration-300 text-center flex items-center justify-center text-sm sm:text-base">
-                                <i class="fas fa-download mr-2"></i>
-                                Download CV
+                       
+                   
+
+                        <!-- View CV Button -->
+                        
+                             <a href="https://pppt1122.my.canva.site/cv-raikhangeza"
+                                 class="border border-gray-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:border-white hover:bg-white hover:text-black transition duration-300 text-center flex items-center justify-center text-sm sm:text-base">
+                                <i class="fas fa-eye mr-2"></i>
+                                View CV
                             </a>
-                        @else
-                            <a href="#contact"
-                                class="border border-gray-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:border-white transition duration-300 text-center text-sm sm:text-base">
-                                Contact Me
-                            </a>
-                        @endif
+                         
+                        </div>
                     </div>
-                </div>
+
 
                 <!-- Right Content - Profile Image -->
                 <div class="flex justify-center order-1 lg:order-2 mb-8 lg:mb-0">
@@ -173,7 +172,7 @@
                                 class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
                                 <img src="{{ asset('images/profile.png') }}" alt="{{ $profile['name'] }} Profile"
                                     class="w-full h-full rounded-full object-cover scale-90"
-                                    onerror="this.src='https://github.com/midas79/portfolio-website/blob/2510bdacda046d695d984622fc4c26220069e2c9/public/images/profile.png">
+                                    onerror="this.src='
                             </div>
                         </div>
                         <!-- Floating elements -->
@@ -215,7 +214,7 @@
                             </div>
 
                             <div class="flex-1 text-center sm:text-left">
-                                <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Who am I?</h3>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">About Me?</h3>
                                 <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                                     {{ $profile['about']['content'] }}
                                 </p>
@@ -248,7 +247,7 @@
                                 <a href="{{ $profile['github'] }}" target="_blank"
                                     class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition duration-300 text-sm sm:text-base">
                                     <i class="fas fa-external-link-alt mr-2"></i>
-                                    Explore My Work
+                                    Explore 
                                 </a>
                             </div>
                         </div>
@@ -299,7 +298,7 @@
                 <h2 class="text-3xl sm:text-4xl font-bold mb-4">
                     <span class="gradient-text">My Tech Stack</span>
                 </h2>
-                <p class="text-gray-400 text-sm sm:text-base">Technologies I've been working with recently</p>
+                <p class="text-gray-400 text-sm sm:text-base">My Recent Development Tools</p>
             </div>
 
             @foreach($skills as $category => $skillList)
@@ -394,6 +393,8 @@
                                     class="flex items-center justify-center sm:justify-start text-gray-400 hover:text-white transition duration-300 text-center sm:text-left">
                                     <i class="fab fa-github mr-2"></i>
                                     <span class="text-xs sm:text-sm">View Code</span>
+                                    
+                                    
                                 </a>
                                 @if($project['demo'] !== '#')
                                     <a href="{{ $project['demo'] }}" target="_blank"
@@ -414,14 +415,14 @@
     <section id="contact" class="py-16 sm:py-20 px-4 sm:px-6">
         <div class="container mx-auto max-w-4xl text-center">
             <div class="mb-6 sm:mb-8">
-                <span class="text-purple-400">{</span><span class="text-blue-400">midas79</span><span
+                <span class="text-purple-400">{</span><span class="text-blue-400">gazeboi</span><span
                     class="text-purple-400">}</span>
                 <span class="text-gray-300 ml-2 hidden sm:inline">Portfolio</span>
             </div>
 
             <h2 class="text-3xl sm:text-4xl font-bold mb-4">Let's work together</h2>
             <p class="text-gray-400 mb-6 sm:mb-8 text-sm sm:text-lg max-w-2xl mx-auto px-4 sm:px-0">
-                I'm always interested in new opportunities and interesting projects. Feel free to reach out!
+               I’m currently open to new roles and creative endeavors. Reach out anytime!
             </p>
 
             <div class="flex justify-center space-x-6 sm:space-x-8 mb-6 sm:mb-8">
@@ -454,7 +455,7 @@
     <footer class="py-6 sm:py-8 px-4 sm:px-6 border-t border-gray-800 bg-gray-900">
         <div class="container mx-auto text-center">
             <p class="text-gray-400 text-xs sm:text-sm">
-                © 2025 <span class="gradient-text">{{ $profile['name'] }}</span> • Powered by ☕
+                © 2025 <span class="gradient-text">{{ $profile['name'] }}</span> • Powered by ⚡
             </p>
         </div>
     </footer>
